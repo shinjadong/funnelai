@@ -1,3 +1,3 @@
-export { default as KeywordMap } from './KeywordMap';
-export { default as KeywordSearch } from './KeywordSearch';
-export { default as KeywordDetail } from './KeywordDetail';
+export { default as KeywordMap } from './KeywordMap/index';
+export { default as KeywordSearch } from './KeywordSearch/index';
+export { default as KeywordDetail } from './KeywordDetail/index';
