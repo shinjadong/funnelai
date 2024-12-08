@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Keyword } from '@/types/keyword';
 
 interface PathFinderSearchProps {
   onSearch: (keywords: string[]) => void;

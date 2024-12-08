@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 import * as echarts from 'echarts'
-import { saveAs } from 'file-saver'
 
 type SearchIntent = 'i' | 'n' | 'c' | 't';
 

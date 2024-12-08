@@ -102,7 +102,7 @@ const PathFinderTrends: React.FC<PathFinderTrendsProps> = ({ keywords }) => {
     return () => {
       chartInstance.current?.dispose();
     };
-  }, [keywords]);
+  }, [keywords, generateTrendData, months, top5Keywords]);
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-4">
