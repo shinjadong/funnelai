@@ -29,9 +29,9 @@ const searchIntentOptions: { value: SearchIntent; label: string; description: st
   },
 ];
 
-const PathFinderSearchIntent: React.FC<PathFinderSearchIntentProps> = ({
+export function PathFinderSearchIntent({
   onIntentChange,
-}) => {
+}: PathFinderSearchIntentProps) {
   const [selectedIntents, setSelectedIntents] = useState<SearchIntent[]>([]);
 
   const handleIntentToggle = (intent: SearchIntent) => {
@@ -92,6 +92,6 @@ const PathFinderSearchIntent: React.FC<PathFinderSearchIntentProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export default PathFinderSearchIntent;

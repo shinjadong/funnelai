@@ -1,4 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
+import styles from './styles.module.css';
 
 export type SearchFeature = 'featured_snippet' | 'image' | 'video' | 'map_pack';
 
@@ -29,9 +32,9 @@ const searchFeatureOptions: { value: SearchFeature; label: string; icon: string 
   },
 ];
 
-const PathFinderSearchFeatures: React.FC<PathFinderSearchFeaturesProps> = ({
+export function PathFinderSearchFeatures({
   onFeaturesChange,
-}) => {
+}: PathFinderSearchFeaturesProps) {
   const [selectedFeatures, setSelectedFeatures] = useState<SearchFeature[]>([]);
 
   const handleFeatureToggle = (feature: SearchFeature) => {
@@ -44,8 +47,8 @@ const PathFinderSearchFeatures: React.FC<PathFinderSearchFeaturesProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-4">
-      <h2 className="text-lg font-semibold mb-2">검색 노출 타입</h2>
+    <div className={styles.container}>
+      <h3>검색 노출 타입</h3>
       <p className="text-sm text-gray-600 mb-4">
         검색 결과에 특별히 노출되는 형태를 기준으로 필터링하세요.
       </p>
@@ -67,6 +70,6 @@ const PathFinderSearchFeatures: React.FC<PathFinderSearchFeaturesProps> = ({
       </div>
     </div>
   );
-};
+}
 
 export default PathFinderSearchFeatures;

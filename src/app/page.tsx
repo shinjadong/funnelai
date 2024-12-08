@@ -1,6 +1,5 @@
 "use client"
 
-import { Hero } from '@/components/features/intro/Hero'
 import { KeywordMap, KeywordSearch, KeywordDetail } from '@/components/features/keywords'
 import { FunnelAI } from '@/components/features/analysis/FunnelAI'
 import { useState } from 'react'

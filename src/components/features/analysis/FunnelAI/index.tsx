@@ -6,8 +6,6 @@ import styles from './styles.module.css';
 export function FunnelAI() {
   // 초기 상태값을 명시적으로 설정
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [selectedMode, setSelectedMode] = useState<string>('패스파인더');
   const [selectedRegion, setSelectedRegion] = useState<string>('KR');
   const [searchTerm, setSearchTerm] = useState<string>('마스크팩');
   const [viewMode, setViewMode] = useState<string>('전체');
@@ -57,7 +55,7 @@ export function FunnelAI() {
     let timer: NodeJS.Timeout;
     if (typeof window !== 'undefined') {
       timer = setTimeout(() => {
-        setIsLoading(false);
+        setIsFullscreen(false);
       }, 1500);
     }
     return () => {
@@ -71,7 +69,7 @@ export function FunnelAI() {
         {/* Mode Tabs */}
         <div className={styles.modeTabs}>
           <button className={styles.modeTab}> 인텐트파인더</button>
-          <button className={`${styles.modeTab} ${styles.active}`}> 패스파인더</button>
+          <button className={`${styles.modeTab} `}> 패스파인더</button>
           <button className={styles.modeTab}> 클러스터파인더</button>
         </div>
 

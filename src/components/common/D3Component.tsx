@@ -34,13 +34,15 @@ interface D3ComponentProps {
 }
 
 const D3Component = ({ chartRef, data, onNodeClick }: D3ComponentProps) => {
-  const [transform, setTransform] = useState<d3.ZoomTransform>(d3.zoomIdentity);
+  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
+  const [nodes, setNodes] = useState<Node[]>([]);
+  const [links, setLinks] = useState<Link[]>([]);
+  const [simulation, setSimulation] = useState<any>(null);
 
   const initializeZoom = useCallback((svg: d3.Selection<SVGSVGElement, unknown, null, undefined>) => {
     const zoom = d3.zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.5, 2])
       .on('zoom', (event) => {
-        setTransform(event.transform);
         svg.select('g').attr('transform', event.transform.toString());
       });
 
