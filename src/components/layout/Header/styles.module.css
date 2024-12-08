@@ -1,0 +1,23 @@
+.header {
+  @apply h-16 bg-white border-b border-gray-200;
+}
+
+.container {
+  @apply h-full px-4 flex items-center justify-between;
+}
+
+.title {
+  @apply text-xl font-semibold text-gray-800;
+}
+
+.actions {
+  @apply flex items-center space-x-4;
+}
+
+.notificationButton {
+  @apply p-2 text-gray-600 hover:text-gray-900;
+}
+
+.profileButton {
+  @apply h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center;
+}
